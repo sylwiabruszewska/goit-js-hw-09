@@ -17,32 +17,22 @@ img {
   max-width: 100%;
 }
 
-.box__color-switcher,
-.box__timer,
-.box__promise-generator {
+/* common styles */
+.box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.box__color-switcher > button,
-.box__timer button,
-.box__promise-generator button {
+button {
   padding: 10px 30px;
   height: 40px;
   background-color: #fff;
   text-transform: uppercase;
   border: lightgray 1px solid;
-  min-width: 100px;
-}
-.box__promise-generator button {
-  min-width: auto;
+  width: auto;
   white-space: nowrap;
-}
-
-.box__color-switcher > button {
-  margin: 0 10px;
 }
 
 button:hover,
@@ -56,10 +46,15 @@ button:focus {
   cursor: not-allowed;
 }
 
-/* timer */
+/* color switcher styles */
+.box__color-switcher > button {
+  margin: 0 10px;
+}
+
+/* timer styles */
 .date-picker-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 .timer {
@@ -76,7 +71,6 @@ button:focus {
 
 input {
   height: 40px;
-  width: 100%;
   padding: 10px;
 }
 
