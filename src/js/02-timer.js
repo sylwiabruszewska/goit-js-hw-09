@@ -9,6 +9,7 @@ const spanMinutes = document.querySelector('[data-minutes]');
 const spanSeconds = document.querySelector('[data-seconds]');
 
 let selectedDate;
+let timerId = null;
 
 const options = {
   enableTime: true,
@@ -74,3 +75,10 @@ const updateCountdown = () => {
 startButton.disabled = true;
 
 flatpickr(inputElement, options);
+
+startButton.addEventListener('click', countdown);
+
+function countdown() {
+  updateCountdown();
+  timerId = setInterval(updateCountdown, 1000);
+}
