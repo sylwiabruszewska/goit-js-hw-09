@@ -16,3 +16,30 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.box__color-switcher {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box__color-switcher > button {
+  padding: 10px 30px;
+  margin: 10px;
+  height: 40px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border: lightgray 1px solid;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(60, 202, 202);
+  color: #fff;
+}
+
+[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
