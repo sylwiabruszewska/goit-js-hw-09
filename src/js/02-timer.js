@@ -79,6 +79,7 @@ flatpickr(inputElement, options);
 startButton.addEventListener('click', countdown);
 
 function countdown() {
+  startButton.disabled = true;
   updateCountdown();
   timerId = setInterval(updateCountdown, 1000);
 }
