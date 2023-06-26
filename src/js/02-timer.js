@@ -41,6 +41,17 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+function addLeadingZero(timeObject) {
+  const updatedTimeObject = {};
+  const keys = Object.keys(timeObject);
+  for (const key of keys) {
+    const value = timeObject[key];
+    const paddedValue = value.toString().padStart(2, '0');
+    updatedTimeObject[key] = paddedValue;
+  }
+  return updatedTimeObject;
+}
+
 startButton.disabled = true;
 
 flatpickr(inputElement, options);
