@@ -18,6 +18,14 @@ const onStartBtnClick = () => {
   timerId = setInterval(changeBackgroundColor, 1000);
 };
 
+const onStopBtnClick = () => {
+  stopButton.disabled = true;
+  startButton.disabled = false;
+  clearInterval(timerId);
+  timerId = null;
+};
+
 stopButton.disabled = true;
 
 startButton.addEventListener('click', onStartBtnClick);
+stopButton.addEventListener('click', onStopBtnClick);
