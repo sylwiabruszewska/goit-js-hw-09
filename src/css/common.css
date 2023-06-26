@@ -18,7 +18,8 @@ img {
 }
 
 .box__color-switcher,
-.box__timer {
+.box__timer,
+.box__promise-generator {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,13 +27,18 @@ img {
 }
 
 .box__color-switcher > button,
-.box__timer button {
+.box__timer button,
+.box__promise-generator button {
   padding: 10px 30px;
   height: 40px;
   background-color: #fff;
   text-transform: uppercase;
   border: lightgray 1px solid;
   min-width: 100px;
+}
+.box__promise-generator button {
+  min-width: auto;
+  white-space: nowrap;
 }
 
 .box__color-switcher > button {
@@ -81,4 +87,11 @@ input {
 .label {
   text-transform: uppercase;
   font-weight: 600;
+}
+
+/* promise generator styles */
+.form {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
 }
