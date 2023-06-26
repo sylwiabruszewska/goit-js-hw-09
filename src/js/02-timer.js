@@ -52,6 +52,25 @@ function addLeadingZero(timeObject) {
   return updatedTimeObject;
 }
 
+const updateCountdown = () => {
+  const currentTime = new Date().getTime();
+  let timeGap = selectedDate - currentTime;
+
+  if (timeGap <= 0) {
+    clearInterval(timerId);
+    return;
+  }
+
+  const currentTimeObject = convertMs(timeGap);
+  const updatedTimeObject = addLeadingZero(currentTimeObject);
+  const { days, hours, minutes, seconds } = updatedTimeObject;
+
+  spanDays.textContent = days;
+  spanHours.textContent = hours;
+  spanMinutes.textContent = minutes;
+  spanSeconds.textContent = seconds;
+};
+
 startButton.disabled = true;
 
 flatpickr(inputElement, options);
