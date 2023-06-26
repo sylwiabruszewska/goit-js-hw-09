@@ -18,7 +18,15 @@ const options = {
   onClose(selectedDates) {
     const currentTime = new Date().getTime();
     selectedDate = selectedDates[0].getTime();
+
+    if (selectedDate < currentTime) {
+      window.alert('Please choose a date in the future');
+    } else {
+      startButton.disabled = false;
+    }
   },
 };
+
+startButton.disabled = true;
 
 flatpickr(inputElement, options);
