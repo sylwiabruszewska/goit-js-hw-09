@@ -10,3 +10,14 @@ function getRandomHexColor() {
 function changeBackgroundColor() {
   bodyElement.style.backgroundColor = getRandomHexColor();
 }
+
+const onStartBtnClick = () => {
+  startButton.disabled = true;
+  stopButton.disabled = false;
+  changeBackgroundColor();
+  timerId = setInterval(changeBackgroundColor, 1000);
+};
+
+stopButton.disabled = true;
+
+startButton.addEventListener('click', onStartBtnClick);
