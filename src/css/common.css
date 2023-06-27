@@ -46,11 +46,6 @@ button:focus {
   cursor: not-allowed;
 }
 
-/* color switcher styles */
-.box__color-switcher > button {
-  margin: 0 10px;
-}
-
 /* timer styles */
 .date-picker-container {
   display: flex;
@@ -84,8 +79,28 @@ input {
 }
 
 /* promise generator styles */
-.form {
+
+.form input {
+  display: block;
+}
+
+/* responsive styles */
+.box {
   display: flex;
-  align-items: flex-end;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 769px) {
+  .box__color-switcher {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    align-items: flex-end;
+    flex-direction: row;
+  }
 }
